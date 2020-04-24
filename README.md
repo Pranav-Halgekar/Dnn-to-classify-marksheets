@@ -1,5 +1,3 @@
-# Dnn-to-classify-marksheets
-Dnn to classify marksheets
 >> Manual to run the programs
 
 1. Software requirements
@@ -30,6 +28,7 @@ training and test set folders further contain four classification folders:Campus
 
 
 4. Classifying marksheets
+>> please change working directory to your working directory wherever indicated by comments.
 >> save the marksheet_classification.hdf5 in dnn application folder
 >> add images to the test_data folder and run  the renaming code
 >> run  the classification file.py. This generates four folders containing classified images
