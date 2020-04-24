@@ -30,7 +30,7 @@ createFolder('classified data/./no campus/')
 images=[]
 results=[]
 
-for i in range(0,file_count):
+for i in range(0,file_count-1):
     imgpath="test_data/"+"application"+str(i)+".jpg"
     test_images= image.load_img(imgpath)
     test_image= image.load_img(imgpath,target_size=(128,128))
@@ -47,32 +47,36 @@ pred1=[]
 path=os.getcwd()
 for i in range(0,len(predictions)):
     if predictions[i]==0:
-        pathalpha=path+"\\campus alpha/"
-        images[i].save(pathalpha+"application_"+str(i)+'.jpeg','JPEG')
+        pathalpha=path+"\campus alpha/"
+      
+        images[i].save(r"C:\Users\pranav\Desktop\final\DNN application\classified data\campus alpha/"+"application_"+str(i)
+                       +'.jpeg','JPEG') # input your working directory before +"application"
         prediction='campus alpha'
         print(prediction)
         pred1.append(prediction)
     elif predictions[i]==1:
-        pathbeta=path+"\\campus beta/"
-        images[i].save(pathbeta+"application_"+str(i)+'.jpeg','JPEG')
+        pathbeta=path+"\campus beta/"
+        images[i].save(r"C:\Users\pranav\Desktop\final\DNN application\classified data\campus beta/"+'application_'+str(i)+
+                       '.jpeg','JPEG')# input your working directory+"application"
 
         prediction='campus beta'
         pred1.append(prediction)
         print(prediction)
     elif predictions[i]==2:
-        pathgamma=path+"\\campus gamma/"
-        images[i].save(pathgamma+"application_"+str(i)+'.jpeg','JPEG')
+        pathgamma=path+"\campus gamma/"
+        images[i].save(r"C:\Users\pranav\Desktop\final\DNN application\classified data\campus gamma/"+'application_'+str(i)+
+                       '.jpeg','JPEG')# input your working directory+"application"
 
         prediction='campus gamma'
         pred1.append(prediction)
         print(prediction)
     elif predictions[i]==3:
-        pathno=path+"\\no campus/"
-        images[i].save(pathno+"application_"+str(i)+'.jpeg','JPEG')
+        pathno=path+"\no campus/"
+        images[i].save(r"C:\Users\pranav\Desktop\final\DNN application\classified data\no campus/"+'application_'+str(i)+
+                       '.jpeg','JPEG')# input your working directory+"application"
 
         prediction='no campus'
         pred1.append(prediction)
         print(prediction)
     
     
-
