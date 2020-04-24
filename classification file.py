@@ -47,27 +47,27 @@ pred1=[]
 path=os.getcwd()
 for i in range(0,len(predictions)):
     if predictions[i]==0:
-        pathalpha=path+"\campus alpha/"
+        pathalpha=path+"\\campus alpha/"
         images[i].save(pathalpha+"application_"+str(i)+'.jpeg','JPEG')
         prediction='campus alpha'
         print(prediction)
         pred1.append(prediction)
     elif predictions[i]==1:
-        pathbeta=path+"\campus beta/"
+        pathbeta=path+"\\campus beta/"
         images[i].save(pathbeta+"application_"+str(i)+'.jpeg','JPEG')
 
         prediction='campus beta'
         pred1.append(prediction)
         print(prediction)
     elif predictions[i]==2:
-        pathgamma=path+"\campus gamma/"
+        pathgamma=path+"\\campus gamma/"
         images[i].save(pathgamma+"application_"+str(i)+'.jpeg','JPEG')
 
         prediction='campus gamma'
         pred1.append(prediction)
         print(prediction)
     elif predictions[i]==3:
-        pathno=path+"\no campus/"
+        pathno=path+"\\no campus/"
         images[i].save(pathno+"application_"+str(i)+'.jpeg','JPEG')
 
         prediction='no campus'
